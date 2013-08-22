@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+	<title>Where do you want to get on the P1?</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type='text/javascript'>
+$(function (){
+  $('a[data-inbound]').on('click', function(){
+    if(!$(this).hasClass('chosen')) {
+      // Reset any previously opened followup questions
+      $('.chosen').removeClass('chosen');
+      $('.follow-up').remove();
+
+      var inbound = $(this).data('inbound');
+      var outbound = $(this).data('outbound');
+      $(this).addClass('chosen');
+      $(this).parent().append('<div class="follow-up"><h3>Are you going:</h3><ul><li><a href="' + inbound + '">Towards downtown, away from Swissvale</a></li><li><a href="' + outbound + '">Away from downtown, towards Swissvale</a></li></ul></div>');
+      $(this).parent().children('.follow-up').slideDown(function(){
+        $('#main').addClass('fade');
+      });
+    } else {
+      $(this).parent().children('.follow-up').slideUp(function(){
+        $('#main').removeClass('fade');
+      });
+      $(this).removeClass('chosen');
+    }
+    return false;
+  });
+});
+  </script>
+  <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="./stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head>
+<body>
+  <div id='main'>
+    <h1>Where do you want to get on the P1?</h1>
+    <h2>On the busway</h2>
+    <ul>
+      <li>
+        <a href="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=16063&showAllBusses=on">
+          Swissvale
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=15879&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=16106&showAllBusses=on">
+          Roslyn
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=15878&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=16105&showAllBusses=on">
+          Hamnett
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=15880&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=16104&showAllBusses=on">
+          Wilkinsburg
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=8154&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=8160&showAllBusses=on">
+          Homewood
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=8161&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=8165&showAllBusses=on">
+          East Liberty
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=8162&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=20501&showAllBusses=on">
+          Negley
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=8163&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=5125&showAllBusses=on">
+          Herron
+        </a>
+      </li>
+      <li>
+        <a href="#" data-inbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=1407&showAllBusses=on" data-outbound="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=5560&showAllBusses=on">
+          Penn Station
+        </a>
+      </li>
+    </ul>
+    <h2>Downtown</h2>
+    <ul>
+      <li>
+        <a href="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=7279&showAllBusses=on">
+          Liberty Ave, past 10th St
+        </a>
+      </li>
+      <li>
+        <a href="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=INBOUND&id=7280&showAllBusses=on">
+          Smithfield Ave at 6th Ave
+        </a>
+      </li>
+      <li>
+        <a href="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=1510&showAllBusses=on">
+          Grant St at US Steel Stop A
+        </a>
+      </li>
+      <li>
+        <a href="http://74.116.73.3/bustime/wireless/html/eta.jsp?route=P1&direction=OUTBOUND&id=3427&showAllBusses=on">
+          Grant St at Post Office
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

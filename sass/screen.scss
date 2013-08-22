@@ -1,0 +1,41 @@
+@import "compass/reset";
+@import "breakpoint";
+@import "compass/typography/links/link-colors";
+@import "compass/css3/images";
+
+#main {
+  color: #333;
+  margin: 20px;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+  color: #aaa;
+  font-style: italic;
+  margin: 5px 0;
+}
+ul li,
+.fade .follow-up ul li {
+  @include background(linear-gradient(#efefef, #aaa));
+  padding: 10px;
+  margin: 1px 0;
+}
+.fade ul li {
+  background: #fff;
+}
+a,
+.fade .follow-up a,
+.fade a.chosen {
+  @include link-colors(#d00);
+  text-decoration: none;
+  display: block;
+}
+.fade a {
+  @include link-colors(#ddd);
+}
+.follow-up {
+  display: none;
+  margin: 20px;
+}
