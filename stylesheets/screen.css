@@ -66,23 +66,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 6, ../sass/screen.scss */
 #main {
   color: #333;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 /* line 10, ../sass/screen.scss */
 h1 {
   font-size: 2em;
+  margin: 0 20px;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #aaa;
   font-style: italic;
-  margin: 5px 0;
+  margin: 25px 0 15px 20px;
 }
 
 /* line 20, ../sass/screen.scss */
+h3 {
+  font-size: 2em;
+  margin: 0 0 15px 0;
+}
+
+/* line 25, ../sass/screen.scss */
 ul li,
 .fade .follow-up ul li {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efefef), color-stop(100%, #aaaaaa));
@@ -90,31 +97,42 @@ ul li,
   background: -moz-linear-gradient(#efefef, #aaaaaa);
   background: -o-linear-gradient(#efefef, #aaaaaa);
   background: linear-gradient(#efefef, #aaaaaa);
-  padding: 10px;
-  margin: 1px 0;
+  margin: 3px 0;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 .fade ul li {
   background: #fff;
 }
 
-/* line 30, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 a,
 .fade .follow-up a,
 .fade a.chosen {
   color: #0e4fb2;
   text-decoration: none;
-  display: block;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
+ul a {
+  display: block;
+  font-size: 3em;
+  padding: 30px;
+}
+
+/* line 43, ../sass/screen.scss */
 .fade a {
   color: #dddddd;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .follow-up {
   display: none;
   margin: 20px;
+}
+
+/* line 50, ../sass/screen.scss */
+footer {
+  margin: 25px 20px;
+  font-size: 2em;
 }

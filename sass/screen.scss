@@ -5,22 +5,26 @@
 
 #main {
   color: #333;
-  margin: 20px;
+  margin: 20px 0;
 }
 h1 {
   font-size: 2em;
+  margin: 0 20px;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #aaa;
   font-style: italic;
-  margin: 5px 0;
+  margin: 25px 0 15px 20px;
+}
+h3 {
+  font-size: 2em;
+  margin: 0 0 15px 0;
 }
 ul li,
 .fade .follow-up ul li {
   @include background(linear-gradient(#efefef, #aaa));
-  padding: 10px;
-  margin: 1px 0;
+  margin: 3px 0;
 }
 .fade ul li {
   background: #fff;
@@ -30,7 +34,11 @@ a,
 .fade a.chosen {
   @include link-colors(#0E4FB2);
   text-decoration: none;
+}
+ul a {
   display: block;
+  font-size: 3em;
+  padding: 30px;
 }
 .fade a {
   @include link-colors(#ddd);
@@ -38,4 +46,8 @@ a,
 .follow-up {
   display: none;
   margin: 20px;
+}
+footer {
+  margin: 25px 20px;
+  font-size: 2em;
 }
