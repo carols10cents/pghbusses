@@ -6,23 +6,27 @@
   <script type='text/javascript'>
 $(function (){
   $('a[data-inbound]').on('click', function(){
-    if(!$(this).hasClass('chosen')) {
+    $this = $(this);
+    if ( $this.hasClass('chosen') ) {
+
+      $('#main').removeClass('fade');
+      $this.removeClass('chosen');
+      $this.parent().children('.follow-up').slideUp();
+
+    } else {
+
       // Reset any previously opened followup questions
       $('.chosen').removeClass('chosen');
       $('.follow-up').remove();
 
-      var inbound = $(this).data('inbound');
-      var outbound = $(this).data('outbound');
-      $(this).addClass('chosen');
-      $(this).parent().append('<div class="follow-up"><h3>Are you going:</h3><ul><li><a href="' + inbound + '">Towards downtown, away from Swissvale</a></li><li><a href="' + outbound + '">Away from downtown, towards Swissvale</a></li></ul></div>');
-      $(this).parent().children('.follow-up').slideDown(function(){
-        $('#main').addClass('fade');
-      });
-    } else {
-      $(this).parent().children('.follow-up').slideUp(function(){
-        $('#main').removeClass('fade');
-        $(this).removeClass('chosen');
-      });
+      var inbound = $this.data('inbound');
+      var outbound = $this.data('outbound');
+
+      $this.addClass('chosen');
+      $this.parent().append('<div class="follow-up"><h3>Are you going:</h3><ul><li><a href="' + inbound + '">Towards downtown, away from Swissvale</a></li><li><a href="' + outbound + '">Away from downtown, towards Swissvale</a></li></ul></div>');
+
+      $('#main').addClass('fade');
+      $this.parent().children('.follow-up').slideDown();
     }
     return false;
   });
