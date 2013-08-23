@@ -1,6 +1,6 @@
 # Pittsburgh Busses
 
-[Try it out!](http://pghbusses.github.io/p1.html)
+[Try it out!](http://carols10cents.github.io/pghbusses/p1.html)
 
 I was excited to hear that the Port Authority of Allegheny County was doing a beta of a [real-time bus tracking service](http://www.pghcitypaper.com/Blogh/archives/2013/08/21/port-authority-launches-pilot-of-real-time-bus-tracker) but I was disappointed to see how tedious it was to use. This is my attempt at making an interface to help bus riders get the real time information they need faster.
 
