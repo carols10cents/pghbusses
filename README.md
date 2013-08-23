@@ -1,4 +1,4 @@
-= Pittsburgh Busses
+# Pittsburgh Busses
 
 [Try it out!](http://pghbusses.github.io/p1.html)
 
@@ -6,11 +6,11 @@ I was excited to hear that the Port Authority of Allegheny County was doing a be
 
 I am not affiliated with PAT nor with the company who is creating the system, Clever Devices. I do not believe I am in violation of the [Terms of use](http://74.116.73.3/bustime/wireless/html/terms.jsp), neither in the letter of the terms (ex: I am not mirroring any content, simply linking to the real-time pages) nor the spirit of being a good net citizen (ex: I downloaded the information I needed a handful of times, slowly, as to not overwhelm their servers with anything close to a noticeable amount of load).
 
-== How it's made
+## How it's made
 
 The following is a stream-of-consciousness of my thoughts, motivations, and processes while creating this prototype.
 
-=== Initial impressions
+### Initial impressions
 
 [The City Paper article](http://www.pghcitypaper.com/Blogh/archives/2013/08/21/port-authority-launches-pilot-of-real-time-bus-tracker) explains at the end that to try out the real time service, you can go to the Port Authority's website and click on the "Real time link". When reading the online version, the words "Real time link" are a link directly to the real time service, saving you a click on PAT's website.
 
@@ -49,7 +49,7 @@ WHYYYYYYYY ALPHABETICAL ORDER I don't know what my stop is called, exactly!! Wha
 
 So finally I pick Smithfield at 6th and I can get real time bus information. Starting from the City Paper article, that was 5 clicks. Let's see if we can do better.
 
-=== Making improvements
+### Making improvements
 
 Luckily for us, this service provides a [hypermedia API](http://www.hypermediaapi.com/), otherwise known as the predictably-formatted content with links that we just navigated through!!
 
@@ -75,7 +75,7 @@ At that point, we have enough information to be able to link you to the real tim
 
 So let's say there's a landing page for this real-time info with an easy to remember URL like whereismybus.portauthority.org (kidding, that's a bit long), and that you click on a link to the P1 page from there. For some of the stops, it'll be a total of 2 clicks to get to the real time info, for some it'll be 3, so let's call it 2.5 and we have just halved the number of clicks!
 
-=== Next steps
+### Next steps
 
 * Handle more bus routes in a useful way
 * Use browsers' geolocation feature to suggest stops nearby
@@ -84,10 +84,10 @@ So let's say there's a landing page for this real-time info with an easy to reme
 * When asking which direction you're going if that information is needed, I'd love to have an option to provide more detail because sometimes people might know the middles of the bus route but not the end, so have a third option that says "not sure" or something and that expands the other two options to list the next few stops in each direction, perhaps.
 * Or maybe people would rather pick the stop where they're planning to get off? If they know the stops around their destination. Sometimes I get on the bus not knowing exactly where I'm going to get off though, just that the bus takes me in the general direction I'm trying to go. More thought needed.
 
-=== Your ideas?
+### Your ideas?
 
 I'd love to hear what you think about this experiment. You can email me at carol.nichols@gmail.com or reach me on twitter @carols10cents. If you're comfortable using github, feel free to open issues or send pull requests!
 
-=== License
+### License
 
 MIT. See LICENSE.
